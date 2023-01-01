@@ -10,6 +10,12 @@ project(${LIBRARY_NAME}
         LANGUAGES CXX)
 set(CMAKE_CXX_FLAGS "-Wall")
 
-ADD_LIBRARY(${LIBRARY_NAME} STATIC ${SOURCE_DIR}/TC_BitwiseOp.cpp)
+set(SOURCES ${SOURCES} 
+        ${SOURCE_DIR}/TC_BitwiseOp.cpp
+        ${SOURCE_DIR}/TC_Lambda.cpp
+        ${SOURCE_DIR}/TC_Memory.cpp
+)
+
+ADD_LIBRARY(${LIBRARY_NAME} STATIC ${SOURCES})
 target_include_directories(${LIBRARY_NAME} PRIVATE ${INCLUDE_DIR})
 target_compile_features(${LIBRARY_NAME} PRIVATE cxx_std_20)
