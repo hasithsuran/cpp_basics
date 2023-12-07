@@ -14,6 +14,8 @@ set(SOURCES ${SOURCES}
         ${SOURCE_DIR}/TC_BitwiseOp.cpp
         ${SOURCE_DIR}/TC_Lambda.cpp
         ${SOURCE_DIR}/TC_Memory.cpp
+        ${SOURCE_DIR}/TC_Optional.cpp
+        ${SOURCE_DIR}/TC_Varient.cpp
 )
 
 ADD_LIBRARY(${LIBRARY_NAME} STATIC ${SOURCES})
